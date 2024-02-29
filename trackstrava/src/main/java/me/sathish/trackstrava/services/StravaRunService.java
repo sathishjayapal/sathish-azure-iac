@@ -56,7 +56,7 @@ public class StravaRunService {
                 System.out.println("Inserting from the system thread \t" +Thread.currentThread().getName());
                 StravaRun stravaRun = stravaRunMapper.toEntity(stravaRunRequest);
                 stravaRun.setRunNumber(RandomGenerator.getDefault().nextLong());
-                stravaRun.setCustomerId(RandomGenerator.getDefault().nextLong(0L,Long.MAX_VALUE));
+                stravaRun.setCustomerId(RandomGenerator.getDefault().nextLong(Long.MAX_VALUE));
                 StravaRun savedStravaRun = stravaRunRepository.save(stravaRun);
                 }).start();
         }
