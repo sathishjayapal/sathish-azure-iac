@@ -10,7 +10,6 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @EnableConfigurationProperties({ApplicationProperties.class})
 @SpringBootApplication
 public class SathishDiscoveryApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(SathishDiscoveryApplication.class, args);
 	}
